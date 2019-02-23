@@ -9,26 +9,25 @@
         <section class="jumbotron text-center">
           <div class="container">
             <img src="{% static 'siba.jpg' %}" alt="">
-            <h1 class="jumbotron-heading">Album example</h1>
-            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-            <p>
-              <a href="#" class="btn btn-primary my-2">Main call to action</a>
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-            </p>
+            <h1 class="jumbotron-heading">My portfolio</h1>
+            <p class="lead text-muted">여태까지 내가 만든 작품들입니다.</p>
           </div>
         </section>
   
         <div class="album py-5 bg-light">
           <div class="container">
             <div class="row">
+            {% for portfolio in portfolios.all %}
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                  <img class="card-img-top" src="{{ portfolio.image.url }}" alt=" Card image cap">
                   <div class="card-body">
-                    <p class="card-text">작품 설명</p>
+                    <h4>{{ portfolio.title }}</h4>
+                    <p class="card-text">{{ portfolio.description }}</p>
                   </div>
                 </div>
               </div>
+            {% endfor %}
             </div>
           </div>
         </div>

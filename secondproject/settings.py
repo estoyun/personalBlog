@@ -119,6 +119,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+# 개발자가 준비하는 파일(static)
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio', 'static'),
     os.path.join(BASE_DIR, 'secondproject', 'static')
@@ -127,3 +129,9 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
+
+# 이용자들이 올리는 파일(media)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
