@@ -22,7 +22,7 @@
                         <a class="nav-link" href="{% url 'blog' %}" style="color: white">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'new' %}" style="color: gray">글쓰기</a>
+                        <a class="nav-link" href="{% url 'newblog' %}" style="color: gray">글쓰기</a>
                     </li>
                     {% load staticfiles %}
                     <li class="nav-item">
@@ -36,7 +36,7 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false" style="color: gray">환영합니다. {{ user.username }} 님!</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{% url 'new' %}" style="color: gray">글쓰기</a>
+                            <a class="dropdown-item" href="{% url 'newblog' %}" style="color: gray">글쓰기</a>
                             <a class="dropdown-item" href="javascript:{document.getElementById('logout').submit()}" style="color: gray">Logout</a>
                             <form id="logout" method="POST" action="{% url 'logout' %}">
                                 {% csrf_token %} <input type="hidden" />
