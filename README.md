@@ -1,4 +1,6 @@
 # personalBlog
+
+### 작품 개요
 	- Likelion second assignment
 	- 회원가입 기능, 블로그 게시물 게시 및 조회 기능
 	- 부트스트랩을 이용한 디자인 수정
